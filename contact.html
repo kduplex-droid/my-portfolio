@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | Kgothatso Mapokgole</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Header / Navigation -->
+<header class="header">
+    <nav class="nav container">
+        <h1 class="logo">KM</h1>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="portfolio.html">Projects</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Contact Section -->
+<main class="container contact-section">
+    <h1 class="section-title">Get in Touch</h1>
+
+    <div class="contact-grid">
+
+        <!-- Contact Details -->
+        <div class="contact-details">
+            <h2>Contact Information</h2>
+            <p>Email: <a class="inline-link" href="mailto:k.duplex16@gmail.com">k.duplex16@gmail.com</a></p>
+            <p>Phone: <a class="inline-link" href="tel:+27697362195">+27 69 736 2195</a></p>
+            <p>Location: Johannesburg, South Africa</p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Send a Message</h2>
+            <form id="contact-form" novalidate>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Your Full Name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="your@email.com" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" rows="5" placeholder="Your message..." required></textarea>
+
+                <button type="submit" class="btn btn-projects">Send Message</button>
+                <p id="form-message"></p>
+            </form>
+        </div>
+
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container footer-content">
+        <p>© 2026 Kgothatso Mapokgole</p>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
