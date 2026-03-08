@@ -145,3 +145,10 @@ style.innerHTML = `
     transition: transform 0.08s linear;
 }`;
 document.head.appendChild(style);
+
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav-links");
+
+toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
