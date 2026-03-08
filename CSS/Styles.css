@@ -200,15 +200,15 @@ nav {
 }
 /* Profile image*/
 .hero-image {
-    position: fixed;    /* fixed relative to the viewport */
-    top: 60px;          /* distance from the top of the page */
-    left: 20px;         /* distance from the left of the page */
+    position: fixed;   
+    top: 150px;      /* moved lower from the top */
+    left: 20px;
     width: clamp(100px, 10vw, 150px);
     height: clamp(100px, 10vw, 150px);
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(255,106,0,0.4);
-    z-index: 1000;      /* stays on top of content */
+    z-index: 1000;
     transition: transform 0.3s ease;
 }
 
