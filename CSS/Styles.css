@@ -1,4 +1,4 @@
-/* ===============================
+update this with fixing the mobile button thing: /* ===============================
    GLOBAL RESET
 ================================= */
 * {
@@ -93,7 +93,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    position: relative;
+    position: relative; /* allows bottom-right positioning */
     padding: 5vw;
 }
 
@@ -455,6 +455,10 @@ footer {
 }
 
 @media(max-width:768px){
+    .nav-links {
+        flex-direction: column;
+        gap: 12px;
+    }
 
     .hero-text {
         text-align: center;
@@ -480,42 +484,6 @@ footer {
     .hero-image {
         bottom: 10px;
         right: 10px;
-    }
-
-    /* Mobile navigation */
-    .menu-toggle {
-        display: block;  /* show hamburger */
-        font-size: 28px;
-        cursor: pointer;
-        color: #ff7a00;
-    }
-
-    .nav-links {
-        display: none; /* hidden initially */
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        width: 220px;
-        flex-direction: column;
-        align-items: center;
-        background: #0f0f0f;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-    }
-
-    .nav-links.active {
-        display: flex;
-        animation: dropdown 0.3s ease;
-    }
-
-    .nav-links li {
-        margin: 12px 0;
-    }
-
-    .nav-links a {
-        color: #fff;
-        font-size: 16px;
     }
 }
 
@@ -546,6 +514,63 @@ footer {
         gap: 20px;
         padding: 40px 0;
     }
+
+   /* ===============================
+   MOBILE DROPDOWN MENU
+================================= */
+
+/* Hide hamburger on desktop */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+    }
+
+    /* Show hamburger */
+    .menu-toggle {
+        display: block;
+        color: #ff7a00; /* orange theme */
+    }
+
+    /* Hide nav links initially */
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #0f0f0f;
+        width: 200px;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        border-radius: 8px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-links a {
+        color: white;
+        font-size: 16px;
+    }
+
+    /* When menu is active */
+    .nav-links.active {
+        display: flex;
+        animation: dropdown 0.3s ease;
+    }
+
 }
 
 /* Dropdown animation */
@@ -558,4 +583,77 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
+   }
+
+   /* Hide hamburger on desktop */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Mobile navigation */
+@media (max-width: 768px) {
+
+    /* Show hamburger button */
+    .menu-toggle {
+        display: block;
+        color: #ff7a00;
+    }
+
+    /* Hide normal nav layout */
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: #0f0f0f;
+        width: 200px;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .nav-links li {
+        margin: 12px 0;
+    }
+
+    /* Dropdown active state */
+    .nav-links.active {
+        display: flex;
+    }
+
+}
+
+   /* Hamburger button */
+.menu-toggle {
+    display: block;          /* visible on desktop and mobile */
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Hide menu by default */
+.nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #0f0f0f;
+    width: 220px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Show menu when active */
+.nav-links.active {
+    display: flex;
+}
+
+/* Optional spacing for links */
+.nav-links li {
+    margin: 12px 0;
+}
 }
