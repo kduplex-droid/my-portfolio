@@ -198,21 +198,16 @@ nav {
 .btn:hover::before {
     left: 130%;
 }
-
-/* ===============================
-   HERO IMAGE - FIXED BOTTOM RIGHT
-================================= */
+/* Profile image*/
 .hero-image {
-    position: fixed; /* changed from absolute to fixed */
-    bottom: 20px;
-    right: 20px;
+    position: relative; /* normal flow */
+    margin: 40px auto 20px; /* space above and below */
     width: clamp(120px, 15vw, 180px);
     height: clamp(120px, 15vw, 180px);
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(255,106,0,0.4);
     transition: transform 0.3s ease;
-    z-index: 1000; /* make sure it stays above other content */
 }
 
 .hero-image img {
@@ -225,7 +220,6 @@ nav {
 .hero-image:hover {
     transform: scale(1.05);
 }
-
 /* ===============================
    ABOUT / SKILLS
 ================================= */
