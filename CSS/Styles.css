@@ -583,5 +583,46 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
+   }
+
+   /* Hide hamburger on desktop */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Mobile navigation */
+@media (max-width: 768px) {
+
+    /* Show hamburger button */
+    .menu-toggle {
+        display: block;
+        color: #ff7a00;
+    }
+
+    /* Hide normal nav layout */
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: #0f0f0f;
+        width: 200px;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .nav-links li {
+        margin: 12px 0;
+    }
+
+    /* Dropdown active state */
+    .nav-links.active {
+        display: flex;
+    }
+
 }
 }
