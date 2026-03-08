@@ -200,10 +200,10 @@ nav {
 }
 
 /* ===============================
-   HERO IMAGE - BOTTOM RIGHT, CIRCLE
+   HERO IMAGE - FIXED BOTTOM RIGHT
 ================================= */
 .hero-image {
-    position: fixed;
+    position: fixed; /* changed from absolute to fixed */
     bottom: 20px;
     right: 20px;
     width: clamp(120px, 15vw, 180px);
@@ -212,7 +212,7 @@ nav {
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(255,106,0,0.4);
     transition: transform 0.3s ease;
-    z-index: 50;
+    z-index: 1000; /* make sure it stays above other content */
 }
 
 .hero-image img {
