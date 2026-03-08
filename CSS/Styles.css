@@ -200,7 +200,7 @@ nav {
 }
 /* Profile image*/
 .hero-image {
-    position: relative; /* normal flow */
+    position: top-right; /* normal flow */
     margin: 40px auto 20px; /* space above and below */
     width: clamp(120px, 15vw, 180px);
     height: clamp(120px, 15vw, 180px);
